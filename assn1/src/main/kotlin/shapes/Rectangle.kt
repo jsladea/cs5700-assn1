@@ -4,16 +4,18 @@ import shapes.interfaces.ICloneable
 import shapes.interfaces.IClosedShape
 import shapes.interfaces.IMoveable
 
-open class Rectangle(protected val p1: Point, protected val p2: Point) : IMoveable, ICloneable<Rectangle>,
-    IClosedShape {
+open class Rectangle(_p1: Point, _p2: Point) : IMoveable, ICloneable<Rectangle>, IClosedShape {
     init {
-        require(p1.x != p2.x && p1.y != p2.y) { "Rectangle must have non-zero width and height" }
+        require(_p1.x != _p2.x && _p1.y != _p2.y) { "Rectangle must have non-zero width and height" }
     }
+
+    protected val p1: Point = _p1.clone()
+    protected val p2: Point = _p2.clone()
 
     constructor(x1: Double, y1: Double, x2: Double, y2: Double) : this(Point(x1, y1), Point(x2, y2))
 
-    fun getP1(): Point = p1.clone()
-    fun getP2(): Point = p2.clone()
+    fun getPoint1(): Point = p1.clone()
+    fun getPoint2(): Point = p2.clone()
 
     override fun area(): Double = kotlin.math.abs((p2.x - p1.x) * (p2.y - p1.y))
 
