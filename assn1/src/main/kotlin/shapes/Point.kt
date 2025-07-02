@@ -13,8 +13,8 @@ class Point(private var _x: Double, private var _y: Double): IMoveable, ICloneab
         private set(value) { _y = value}
 
     override fun move(dx: Double, dy: Double) {
-        _x += dx
-        _y += dy
+        x += dx
+        y += dy
     }
 
     override fun clone(): Point = Point(_x, _y);

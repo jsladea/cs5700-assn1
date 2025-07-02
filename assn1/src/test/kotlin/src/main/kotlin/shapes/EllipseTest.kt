@@ -21,6 +21,7 @@ class EllipseTest {
         val e = Ellipse(Point(0.0, 0.0), 3.0, 2.0)
         val cloned = e.clone()
         assertEquals(PI * 3 * 2, cloned.area(), 0.0001)
+        assertEquals(2.0, cloned.getR2())
     }
 
     @Test fun testInvalidConstructorArgsThrows() {
