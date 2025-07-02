@@ -11,13 +11,13 @@ class SquareTest {
 
     @Test fun testMove() {
         val square = Square(1.0, 2.0, 5.0)
-        val x2 = square.getPoint2().x;
-        val y2 = square.getPoint2().y;
+        val x2 = square.getP2().x;
+        val y2 = square.getP2().y;
         square.move(-1.0, -2.0)
-        assertEquals(0.0, square.getPoint1().x)
-        assertEquals(0.0, square.getPoint1().y)
-        assertEquals(x2-1.0, square.getPoint2().x)
-        assertEquals(y2-2.0, square.getPoint2().y)
+        assertEquals(0.0, square.getP1().x)
+        assertEquals(0.0, square.getP1().y)
+        assertEquals(x2-1.0, square.getP2().x)
+        assertEquals(y2-2.0, square.getP2().y)
     }
 
     @Test fun testClone() {

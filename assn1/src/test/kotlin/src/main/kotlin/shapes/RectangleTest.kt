@@ -12,10 +12,10 @@ class RectangleTest {
     @Test fun testMove() {
         val rect = Rectangle(0.0, 0.0, 4.0, 3.0)
         rect.move(1.0, 2.0)
-        assertEquals(1.0, rect.getPoint1().x)
-        assertEquals(2.0, rect.getPoint1().y)
-        assertEquals(5.0, rect.getPoint2().x)
-        assertEquals(5.0, rect.getPoint2().y)
+        assertEquals(1.0, rect.getP1().x)
+        assertEquals(2.0, rect.getP1().y)
+        assertEquals(5.0, rect.getP2().x)
+        assertEquals(5.0, rect.getP2().y)
     }
 
     @Test fun testClone() {

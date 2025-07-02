@@ -7,5 +7,5 @@ class Square : Rectangle {
 
     constructor(x: Double, y: Double, sideLength: Double) : this(Point(x, y), sideLength)
 
-    override fun clone(): Square = Square(p1.clone(), p2.x - p1.x)
+    override fun clone(): Square = Square(getP1(), getP2().x - getP1().x)
 }
